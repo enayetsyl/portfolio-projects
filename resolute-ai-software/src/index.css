@@ -1,0 +1,27 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+
+    /* CSS */
+.custom-div {
+    position: relative;
+  }
+  
+  .custom-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px; /* Adjust as needed */
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: blue; /* Adjust border color */
+    display: none;
+  }
+  
+  .custom-div:focus-within::before,
+  .custom-div input:focus::before {
+    display: block;
+  }
